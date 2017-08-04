@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" href="/assets/logo.jpg" type="image/x-icon">
+	<link rel="icon" href="/assets/logo.jpg" type="image/x-icon">
+	<title>Furncart</title>
+	<meta charset="utf-8">
+   	<meta name="viewport" content="width=device-width, initial-scale=1">
+	   	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/assets/inf.css">
+
+</head>
+<body>
+	<header class="container-fluid row">
+		<div class="text-center col-sm-12 col-xs-12 col-md-2 col-lg-2">
+			<img src="/assets/mpl.jpg" class="logo" width="100px" height="100px">
+		</div>
+		<div>
+			<div class="col-sm-6 col-xs-12 col-md-6 col-lg-6 text-center form">
+				<form action="" method="post" class="form1">
+					<input type="search" name="" placeholder="search here" class="searc">
+					<input type="button" name="" value="    " class="button">
+				</form>
+			</div>
+			<div class="col-sm-6 col-xs-12 col-md-4 col-lg-4 text-center">
+				<div class="form2">
+					<!--<input type="button" name="" value="Wishlist" class="button0">-->
+					<div class="popupHoverElement" style="display: inline;">
+					<input type="button" name="" value="Categories" class="button0">
+					 <div id="two" class="popupBox">
+					 	<!--<form class="form3">-->
+				<caption>CATEGORIES</caption><br><br>
+				<form action="/kitchen"><input type="submit" class="button1" value="Kitchen"></form>
+				<form action="/bedroom"><input type="submit" class="button1" value="Bedroom"></form>
+				<form action="/living"><input type="submit" class="button1" value="Living Room"></form>
+				<form action="/wadrobe"><input type="submit" class="button1" value="Wadrobe"></form>
+				<form action="/table"><input type="submit" class="button1" value="Table"></form>
+			          <!--</form>-->
+			          </div>
+			          </div>
+
+				<!--	<input type="button" name="" value="Your orders" class="button0" onclick="document.getElementById('order').style.display='block'" style="width:auto;">-->
+					<input type="button" name="" value="LOGIN" class="button0" id="login" onclick="document.getElementById('loger').style.display='block'" style="width:auto;">
+				</div>
+			</div>
+		</div>
+		<div id="loger" class="layout text-center">
+		    <h1 class="heading">Login Form</h1>
+
+		    <form action="Second_page.html" method="post" class="logform">
+		      <div class="imgcontainer">
+		        <img src="/assets/mpl.jpg" alt="logo" class="log" width="100px" height="100px">
+		      </div>
+
+		      <div class="container1">
+		        <label class="lab"><b>Username</b></label>
+		        <input type="text" placeholder="Enter Username" name="uname" class="sty3" ng-model="name" required>
+
+		        <label class="lab"><b>Password</b></label>
+		        <input type="password" placeholder="Enter Password" name="psw" class="sty3" ng-model="pass" required>
+
+		        <button type="submit" ng-disabled="!name || !pass" class="butt1" title="login" id="butter">Login</button>
+		        <!--<input type="checkbox" checked="checked"> Remember me-->
+		      </div>
+
+		      <div class="container1 bgcl text-center">
+		      <div class="clearfix">
+		      	 <button type="button" class="signupbtn" onclick="document.getElementById('register').style.display='block'">Sign Up</button>
+		        <button type="button" class="cancelbtn butt" onclick="document.getElementById('loger').style.display='none'">Cancel</button>
+		       </div>
+		        <span class="psw">Forgot <a href="#">password?</a></span>
+		      </div>
+		    </form>
+		</div>
+		<div id="register" class="layout text-center">
+				<div class="heading2"><h2>Registration</h2><br></div>
+			<form action="Second_page.html" style="border:1px solid #ccc" class="logform">
+			  <div class="container1">
+			    <label class="lab"><b>Email</b></label>
+			    <input type="text" placeholder="Enter Email" name="email" class="sty3" ng-model="email1" required>
+
+			    <label class="lab"><b>Password</b></label>
+			    <input type="password" placeholder="Enter Password" name="psw" class="sty3" ng-model="pass1" required>
+
+			    <label class="lab"><b>Repeat Password</b></label>
+			    <input type="password" placeholder="Repeat Password" name="psw-repeat" class="sty3" ng-model="pass2" required>
+			   <!-- <input type="checkbox" checked="checked"> Remember me
+			    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>-->
+
+			    <div class="clearfix">
+				    <button type="submit" ng-disabled = "!email1 || !pass1 || !pass2" class="signupbtn">Sign Up</button>
+				    <button type="button" class="cancelbtn" onclick="document.getElementById('register').style.display='none'">Cancel</button>
+			    </div>
+			  </div>
+			</form>
+		</div>
+	</header>
+
+
+		<% for(var i=0;i< tables.length;i++){ %><div class="sty4"><br><ul>
+	 	<% if (i==0) { %><p><img src = "/assets/images/tb1.jpeg" center width="200px"height="200px" class="sty2"></p><br><br><% } %>
+		<% if (i==1){ %><p><img src = "/assets/images/tb2.jpeg" center width="200px"height="200px" class="sty2"></p><br><br><% } %>
+	  <li><%=tables[i].prodName %></li><br><br>
+	  <li><%=tables[i].description %></li><br><br>
+	  <li><%=tables[i].features %></li><br><br>
+	  <li><%=tables[i].general %></li><br><br>
+	  <li><%=tables[i].dimensions %></li><br><br>
+	</ul>
+	  <div class="clearfix">
+			<form action="/payment"><input type="text" class= "sty1" name="price"  value="<%=tables[i].price%>" ><input type="submit" value="Buy Now" class="submit1" ></form><br><br>
+			<button type="button" class="submit1" onclick="document.getElementById('mk').style.display='none'">Cancel</button>
+		</div><br><br></div>
+	  <% } %>
+
+	<footer class="container-fluid row foot">
+		<div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 footdiv text-center">
+		&copy 2017
+		</div>
+	</footer>
+</body>
+</html>

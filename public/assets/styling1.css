@@ -1,0 +1,376 @@
+@font-face {
+   font-family: myFirstFont;
+   src: url(BreeSerif-Regular.ttf);
+}
+body
+{
+
+  font-family: myFirstFont;
+}
+header
+{
+	background-image: url('theme.jpg');
+}
+.logo
+{
+	border-radius: 50%;
+}
+.form
+{
+	margin-top: 3%;
+}
+.form2
+{
+	margin-top: 8%;
+}
+.search
+{
+	margin-left:30%;
+    width: 230px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon1.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 50px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+.search:focus
+{
+	width: 100%;
+}
+input[type=text]:focus
+{
+    border: 3px solid #555;
+}
+.button1
+{
+    background-color: rgba(0,0,0,0);
+    padding: 0px;
+    border: 0px;
+}
+.button
+{
+	width: 5%;
+	height: 40px;
+	background-image: url('search.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	padding: 0px;
+	border:0px;
+	color: white;
+	filter: contrast(1);
+	filter: brightness(100%);
+	filter: invert(100%);
+	position: relative;
+}
+.button:hover
+{
+	background-color: #ede1e1;
+}
+.button0
+{
+	height: 40px;
+	background-color: transparent;
+	border: 0px;
+	font-family: cursive;
+	font-size: 1.2em;
+	color: white;
+}
+.button0:hover
+{
+	background-color: green;
+	border:0px;
+	text-decoration: none;
+	border-radius: 25%;
+}
+.foot
+{
+    background-image: url('theme.jpg');
+    height: 40px;
+    color: white;
+    margin-top: 5px;
+		position: static;
+		margin-left: -50px;
+		margin-bottom: -20px;
+}
+.bg1
+{
+	background-color: #ffffff;
+}
+.bg2
+{
+	background-image: url(WallpaperGrey.jpg);
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-left: 100px;
+	font-family: myFirstFont;
+	font-size: 22px;
+}
+.text
+{
+	border-radius: 10px;
+	border: solid 3px white;
+	width: 300px;
+	color: #000000;
+	margin-right: 22%;
+	float: right;
+	position: relative;
+}
+.text2
+{
+	border-radius: 10px;
+	border: solid 3px white;
+	width: 100px;
+	color: #000000;
+	margin-right: 44.5%;
+	float: right;
+	position: relative;
+}
+.text1
+{
+	border-radius: 10px;
+	width: auto;
+	color: #000000;
+	float: right;
+	margin-right: 42%;
+	position: relative;
+}
+.banks
+{
+	border-radius: 10px;
+	border: solid 3px white;
+	color: #000000;
+	margin-right: 11%;
+	float: right;
+	position: relative;
+}
+.pay
+{
+	border-radius: 10px;
+	border: solid 3px white;
+	color: #000000;
+	margin-right: 21%;
+	float: right;
+	position: relative;
+}
+
+.radio
+{
+	margin-left: 50%;
+}
+h6
+{
+	color: red;
+}
+.submit
+{
+	margin-left: 40%;
+	border-radius: 20px;
+	background-color: #808080;
+	color: white;
+	cursor: pointer;
+	padding: 10px 20px 10px 20px;
+	font-size: 15px;
+
+}
+.footdiv
+{
+    margin-top: 10px;
+}
+
+.container1 {
+    padding: 16px;
+}
+form.logform {
+    border: 3px solid white;
+    background-color: rgba(0,0,0,0.5);
+    width: 60%;
+    text-align: center;
+    display: inline-block;
+}
+@media screen and (max-width: 420px) {
+    form.logform {
+    border:none;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    display: inline-block;
+}
+.container1 {
+    padding: 0px;
+}
+html { overflow-x: hidden; }
+}
+.sty{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button.butt1 {
+    background-color: #373f10;
+    color: white;
+    padding: 15px 22px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button.butt:hover{
+    opacity: 0.5;
+}
+.cancelbtn {
+    color: white;
+    width: auto;
+    padding: 14px 20px;
+    background-color: #373f10;
+}
+}
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+.lab
+{
+    color: white;
+}
+.bgcl
+{
+    background-color: white;
+    height: 180px;
+}
+img.log {
+    border-radius: 50%;
+}
+
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 550px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 550px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+.layout {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.8);
+    padding-top: 60px;
+}
+.layou{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.8);
+    padding-top: 60px;
+}
+.layout1 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left:0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+.load
+{
+    width:150px;
+    height:100px;
+}
+@media screen and (max-width: 600px) {
+    .bg1
+{
+    margin: 0px auto;
+    margin-top: 100px;
+    height: 400px;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(255,255,255);
+}
+}
+.heading
+{
+    color: white;
+}
+.clearfix::after {
+    content: " ";
+    clear: both;
+    display: table;
+}
+.signupbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+.cancelbtn,.signupbtn {
+    float: left;
+    width: 100%;
+}
+div.heading2
+{
+    background-color: black;
+    color: white;
+}
+.popupBox {
+    visibility:hidden;
+    opacity:0;
+    -webkit-transition:visibility 0s linear 0.3s, opacity 0.3s linear;
+    -moz-transition:visibility 0s linear 0.3s, opacity 0.3s linear;
+    -o-transition:visibility 0s linear 0.3s, opacity 0.3s linear;
+    transition:visibility 0s linear 0.3s, opacity 0.3s linear;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition:all 0.4s ease;
+    transition: all 0.4s ease;
+    -webkit-transition-delay: 1s;
+    -moz-transition-delay: 1s;
+    -o-transition-delay:1s;
+    transition-delay: 1s;
+}
+.popupHoverElement:hover > .popupBox {
+    visibility:visible;
+    opacity:1;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-transition-delay: 0s;
+ }

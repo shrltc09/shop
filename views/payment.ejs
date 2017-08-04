@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="shortcut icon" href="/assets/logo.jpg" type="image/x-icon">
+		<link rel="icon" href="/assets/logo.jpg" type="image/x-icon">
+		<title>Furncart</title>
+		<meta charset="utf-8">
+   		<meta name="viewport" content="width=device-width, initial-scale=1">
+	   	<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="/assets/styling1.css">
+
+	</head>
+	<body ng-app>
+		<header class="container-fluid row">
+				<div class="text-center col-sm-12 col-xs-12 col-md-2 col-lg-2">
+					<img src="/assets/mpl.jpg" class="logo" width="100px" height="100px">
+				</div>
+				<div>
+					<div class="col-sm-6 col-xs-12 col-md-6 col-lg-6 text-center form">
+						<form action="" method="post" class="form1">
+							<input type="search" name="" placeholder="search here" class="search">
+							<input type="button" name="" value="    " class="button">
+						</form>
+					</div>
+					<div class="col-sm-6 col-xs-12 col-md-4 col-lg-4 text-center">
+						<div class="form2">
+							<!--<input type="button" name="" value="Wishlist" class="button0">-->
+							<div class="popupHoverElement" style="display: inline;">
+							<input type="button" name="" value="Categories" class="button0">
+							 <div id="two" class="popupBox">
+							 	<!--<form class="form3">-->
+						<caption>CATEGORIES</caption><br><br>
+						<form action="/kitchen"><input type="submit" class="button1" value="Kitchen"></form>
+						<form action="/bedroom"><input type="submit" class="button1" value="Bedroom"></form>
+						<form action="/living"><input type="submit" class="button1" value="Living Room"></form>
+						<form action="/wadrobe"><input type="submit" class="button1" value="Wadrobe"></form>
+						<form action="/table"><input type="submit" class="button1" value="Table"></form>
+					          <!--</form>-->
+					          </div>
+					          </div>
+
+						<!--	<input type="button" name="" value="Your orders" class="button0" onclick="document.getElementById('order').style.display='block'" style="width:auto;">-->
+							<input type="button" name="" value="LOGIN" class="button0" id="login" onclick="document.getElementById('loger').style.display='block'" style="width:auto;">
+						</div>
+					</div>
+				</div>
+				<div id="loger" class="layout text-center">
+				    <h1 class="heading">Login Form</h1>
+
+				    <form action="Second_page.html" method="post" class="logform">
+				      <div class="imgcontainer">
+				        <img src="/assets/mpl.jpg" alt="logo" class="log" width="100px" height="100px">
+				      </div>
+
+				      <div class="container1">
+				        <label class="lab"><b>Username</b></label>
+				        <input type="text" class="sty"placeholder="Enter Username" name="uname" ng-model="name" required>
+
+				        <label class="lab"><b>Password</b></label>
+				        <input type="password" class="sty"placeholder="Enter Password" name="psw" ng-model="pass" required>
+
+				        <button type="submit" ng-disabled="!name || !pass" class="butt1" title="login" id="butter">Login</button>
+				        <!--<input type="checkbox" checked="checked"> Remember me-->
+				      </div>
+
+				      <div class="container1 bgcl text-center">
+				      <div class="clearfix">
+				      	 <button type="button" class="signupbtn" onclick="document.getElementById('register').style.display='block'">Sign Up</button>
+				        <button type="button" class="cancelbtn butt" onclick="document.getElementById('loger').style.display='none'">Cancel</button>
+				       </div>
+				        <span class="psw">Forgot <a href="#">password?</a></span>
+				      </div>
+				    </form>
+				</div>
+				<div id="register" class="layout text-center">
+						<div class="heading2"><h2>Registration</h2><br></div>
+					<form action="Second_page.html" style="border:1px solid #ccc" class="logform">
+					  <div class="container1">
+					    <label class="lab"><b>Email</b></label>
+					    <input type="text" class="sty" placeholder="Enter Email" name="email" ng-model="email1" required>
+
+					    <label class="lab"><b>Password</b></label>
+					    <input type="password" class="sty" placeholder="Enter Password" name="psw" ng-model="pass1" required>
+
+					    <label class="lab"><b>Repeat Password</b></label>
+					    <input type="password" placeholder="Repeat Password" name="psw-repeat" ng-model="pass2" required>
+					    <div class="clearfix">
+						    <button type="submit" ng-disabled = "!email1 || !pass1 || !pass2" class="signupbtn">Sign Up</button>
+						    <button type="button" class="cancelbtn" onclick="document.getElementById('register').style.display='none'">Cancel</button>
+					    </div>
+					  </div>
+					</form>
+				</div>
+		</header>
+		<div class="container-fluid row bg1">
+			<div class=" col-lg-2 col-md-2 col-sm-0 col-xs-0"></div>
+			<div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12 bg2 ">
+				<form ng-app="myApp" name="myForm" action="/payment"  method="POST" novalidate>
+	<p>First Name:
+	<input type="text" name="user" ng-model="user" class="text" required>
+	<span style="color:red" ng-show="myForm.user.$dirty && myForm.user.$invalid">
+	<span ng-show="myForm.user.$error.required"><font size="2px">First Name is required.</font></span>
+	</span>
+	</p><br><br>
+	<p>Last Name:
+	<input type="text" name="lname" ng-model="name" class="text"required>
+	<span style="color:red" ng-show="myForm.lname.$dirty && myForm.lname.$invalid">
+	<span ng-show="myForm.lname.$error.required"><font size="2px">Last Name is required.</font></span>
+	</span>
+	</p><br><br>
+	<p>Email:
+	<input type="email" name="email" ng-model="email" class="text"required>
+	<span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+	<span ng-show="myForm.email.$error.required"><font size="2px">Email is required.</span>
+	<span ng-show="myForm.email.$error.email">Invalid email address.</font></span>
+	</span>
+	</p><br><br>
+	<p>Phone Number:
+	<input type="text" name="phno" ng-model="phno" pattern="[1-9]{1}[0-9]{9}" class="text" required>
+	<span style="color:red" ng-show="myForm.phno.$dirty && myForm.phno.$invalid">
+	<span ng-show="myForm.phno.$error.required"><font size="2px">Phone Number is required.</span>
+	<span ng-show="myForm.phno.$error.pattern">Invalid Phone Number.</font></span>
+	</span>
+	</p><br><br>
+	<p>Amount to be paid: <%= prices%></p><br>
+	Mode of Payment:<font color="red">*</font>
+	<select class="pay" name="pay"ng-model="pay"required>
+	<option value="SELECT_pay">---Select mode of Payment---</option>
+	<option value="credit" > Credit Card</option>
+	<option value="debit" > Debit Card</option>
+	<option value="net"> Net Banking</option>
+	<option value="cod"> Cash On Delivery</option></select><br><br>
+	 <div ng-show="pay=='credit'||pay=='debit'"  > Enter your Card Number:
+	 <input type="text" maxlength="16" pattern="[0-9]{16}" class="text" name="cno"required><br><br>
+	 Expiry Date:
+	 <div class="text1"><pre><input type=number min="01" max="12"  name="epm" placeholder="MM">	<input type=number min="17" max="56"  name="epy" placeholder="YY"></pre></div><br><br>
+	 CVV:
+	 <input type="password" maxlength="4" pattern="[0-9]{4}" class="text2" name="cvv" required ></div><br><br>
+
+	 <div ng-show="pay=='net'"><select class="banks" name="banks"><option value="SELECT_BANK">---Select Bank---</option><option value="ALLAHABAD">Allahabad Bank</option><option value="ANDHRA">Andhra Bank</option><option value="AXIS">AXIS Bank</option><option value="BANDHAN">Bandhan Bank</option><option value="BASSIENCATHOLICCOOPB">Bassien Catholic Co-Operative Bank</option><option value="BNPPARIBAS">BNP Paribas</option><option value="BOBAHRAIN">Bank of Bahrain and Kuwait</option><option value="BOBARODA">Bank of Baroda</option><option value="BOBARODAC">Bank of Baroda Corporate</option><option value="BOBARODAR">Bank of Baroda Retail</option><option value="BOI">Bank of India</option><option value="BOM">Bank of Maharashtra</option><option value="CANARA">Canara Bank</option><option value="CATHOLICSYRIAN">Catholic Syrian Bank</option><option value="CBI">Central Bank</option><option value="CITI">Citibank</option><option value="CITYUNION">City Union Bank</option><option value="CORPORATION">Corporation Bank</option><option value="COSMOS">Cosmos Co-op Bank</option><option value="DBS">digibank by DBS</option><option value="DCB">DCB BANK LTD</option><option value="DENA">Dena Bank</option><option value="DEUTSCHE">Deutsche Bank</option><option value="DHANBANK">Dhanalakshmi Bank</option><option value="FEDERALBANK">Federal Bank</option><option value="HDFC">HDFC Bank</option><option value="ICICI">ICICI Bank</option><option value="IDBI">IDBI Bank</option><option value="IDFC">IDFC Bank</option><option value="INDIANBANK">Indian Bank</option><option value="INDUSIND">IndusInd Bank</option><option value="IOB">Indian Overseas Bank</option><option value="JANATABANKPUNE">JANATA SAHAKARI BANK LTD PUNE</option><option value="JKBANK">J&amp;K Bank</option><option value="KARNATAKA">Karnataka Bank</option><option value="KARURVYSYA">Karur Vysya Bank</option><option value="KOTAK">Kotak Bank</option><option value="LAKSHMIVILAS">Lakshmi Vilas Bank - Retail</option><option value="LAKSHMIVILASC">Lakshmi Vilas Bank - Corporate</option><option value="OBC">Oriental Bank of Commerce</option><option value="PNB">Punjab National Bank</option><option value="PNBC">Punjab National Bank Corporate</option><option value="PNSB">Punjab &amp; Sind Bank</option><option value="PUNJABMAHA">Punjab &amp; Maharashtra Co-op Bank</option><option value="RATNAKAR">RBL Bank Limited - Retail Net Banking</option><option value="RBS">RBS</option><option value="SARASWAT">Saraswat Co-op Bank</option><option value="SHAMRAOVITHAL">Shamrao Vithal Co-op Bank</option><option value="SOUTHINDIAN">The South Indian Bank</option><option value="STANC">Standard Chartered Bank</option><option value="SBI">State Bank of India</option><option value="SYNDICATE">Syndicate Bank</option><option value="TNMERCANTILE">Tamil Nadu Merchantile Bank</option><option value="TNSC">TNSC Bank</option><option value="UCO">UCO Bank</option><option value="UNIONBANK">Union Bank of India</option><option value="UNITEDBANK">United Bank of India</option><option value="VIJAYABANK">Vijaya Bank</option><option value="YESBANK">Yes Bank</option></select></div><br><br>
+	<p>
+	<input type="submit" value="submit" class="submit" ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||myForm.name.$dirty && myForm.name.$invalid ||myForm.email.$dirty && myForm.email.$invalid||myForm.ephno.$dirty && myForm.phno.$invalid" ></p>
+</form>
+				<script>
+					var app = angular.module('myApp', []);
+
+				</script>
+			</div>
+			<div class=" col-lg-2 col-md-2 col-sm-0 col-xs-0"></div>
+		</div>
+		<footer class="container-fluid row foot">
+			<div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 footdiv text-center">
+			&copy 2017
+			</div>
+		</footer>
+	</body>
+</html>

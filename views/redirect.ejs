@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="shortcut icon" href="/assets/logo.jpg" type="image/x-icon">
+		<link rel="icon" href="/assets/logo.jpg" type="image/x-icon">
+		<title>Furncart</title>
+		<meta charset="utf-8">
+   		<meta name="viewport" content="width=device-width, initial-scale=1">
+	   	<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="/assets/styling2.css">
+	</head>
+	<body>
+		<header class="container-fluid row">
+		<div class="text-center col-sm-12 col-xs-12 col-md-2 col-lg-2">
+			<img src="/assets/mpl.jpg" class="logo" width="100px" height="100px">
+		</div>
+		<div>
+			<div class="col-sm-6 col-xs-12 col-md-6 col-lg-6 text-center form">
+				<form action="" method="post" class="form1">
+					<input type="search" name="" placeholder="search here" class="search">
+				</form>
+			</div>
+			<div class="col-sm-6 col-xs-12 col-md-4 col-lg-4 text-center">
+				<div class="form2">
+					<div class="popupHoverElement" style="display: inline;">
+					<input type="button" name="" value="Categories" class="button0">
+					 <div id="two" class="popupBox">
+						<caption>CATEGORIES</caption>
+						<form action="/kitchen"><input type="submit" class="button1" value="Kitchen"></form>
+						<form action="/bedroom"><input type="submit" class="button1" value="Bedroom"></form>
+						<form action="/living"><input type="submit" class="button1" value="Living Room"></form>
+						<form action="/wadrobe"><input type="submit" class="button1" value="Wadrobe"></form>
+						<form action="/table"><input type="submit" class="button1" value="Table"></form>
+			          </div>
+			          </div>
+					<input type="button" name="" value="LOGIN" class="button0" id="login" onclick="document.getElementById('loger').style.display='block'" style="width:auto;">
+				</Delivery>
+			</div>
+		</div>
+		<div id="loger" class="layout text-center">
+		    <h1 class="heading">Login Form</h1>
+
+		    <form action="Second_page.html" method="post" class="logform">
+		      <div class="imgcontainer">
+		        <img src="/assets/mpl.jpg" alt="logo" class="log" width="100px" height="100px">
+		      </div>
+
+		      <div class="container1">
+		        <label class="lab"><b>Username</b></label>
+		        <input type="text" placeholder="Enter Username" name="uname" ng-model="name" required>
+
+		        <label class="lab"><b>Password</b></label>
+		        <input type="password" placeholder="Enter Password" name="psw" ng-model="pass" required>
+
+		        <button type="submit" ng-disabled="!name || !pass" class="butt1" title="login" id="butter">Login</button>
+		        <!--<input type="checkbox" checked="checked"> Remember me-->
+		      </div>
+
+		      <div class="container1 bgcl text-center">
+		      <div class="clearfix">
+		      	 <button type="button" class="signupbtn" onclick="document.getElementById('register').style.display='block'">Sign Up</button>
+		        <button type="button" class="cancelbtn butt" onclick="document.getElementById('loger').style.display='none'">Cancel</button>
+		       </div>
+		        <span class="psw">Forgot <a href="#">password?</a></span>
+		      </div>
+		    </form>
+		</div>
+		<div id="register" class="layout text-center">
+				<div class="heading2"><h2>Registration</h2><br></div>
+			<form action="Second_page.html" style="border:1px solid #ccc" class="logform">
+			  <div class="container1">
+			    <label class="lab"><b>Email</b></label>
+			    <input type="text" placeholder="Enter Email" name="email" ng-model="email1" required>
+
+			    <label class="lab"><b>Password</b></label>
+			    <input type="password" placeholder="Enter Password" name="psw" ng-model="pass1" required>
+
+			    <label class="lab"><b>Repeat Password</b></label>
+			    <input type="password" placeholder="Repeat Password" name="psw-repeat" ng-model="pass2" required>
+			    <div class="clearfix">
+				    <button type="submit" ng-disabled = "!email1 || !pass1 || !pass2" class="signupbtn">Sign Up</button>
+				    <button type="button" class="cancelbtn" onclick="document.getElementById('register').style.display='none'">Cancel</button>
+			    </div>
+			  </div>
+			</form>
+		</div>
+	</header>
+		<div class="container-fluid text-center bg1">
+
+			<h2>Your Payment has been Successfull!<br><br>If you wish to continue shopping click on continue </h2><br><br>
+			<a href="/shopping">Continue</a>
+		</div>
+		<footer class="container-fluid row foot">
+			<div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 footdiv text-center">
+			&copy 2017
+			</div>
+		</footer>
+	</body>
+</html>
